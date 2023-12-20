@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Latihan</title>
+</head>
+<body>
+
+	<div id="info">Mati</div>
+	<button id="on" style="width: 100px; height: 30px;">On</button>
+	<button id="off" style="width: 100px; height: 30px;">Off</button>
+
+	<div style="border: 1px solid; margin-top: 10px;">
+		<p style="margin: 0;">No 4</p>
+		<hr>
+		<div id="totalBarang"></div>
+		<div id="kurangBeruntung"></div>		
+	</div>
+
+	<script type="text/javascript">
+		// 1. bilangan terbesar
+		const bil1 = 40;
+		const bil2 = 20;
+		const bil3 = 140;
+
+		if (bil1 > bil2 && bil1 > bil3) {
+			hasil1 = `mantap cuy ${bil1}`;
+		} else if (bil2 > bil1 && bil2 > bil3) {
+			hasil1 = `mantap men ${bil2}`;
+		}else {
+			hasil1 = `mantap bro ${bil3}`;
+		}
+		console.log(hasil1);
+
+		// 2. 
+		let angka = 0;
+		if (angka >= 0) {
+		    hasil1 = "positif";
+		}
+		else {
+		    hasil1 = "negatif";
+		}
+
+		if (angka % 2 == 0) {
+		    hasil2 = "genap";
+		}
+		else {
+		    hasil2 = "ganjil";
+		}
+		console.log(`jadi bilangan ${angka} adalah ${hasil1} dan ${hasil2}`);
+		
+		// lampu
+		const on = document.getElementById('on');
+		const off = document.getElementById('off');
+		const info = document.getElementById('info');
+
+		on.addEventListener("click", function (e) {
+			info.innerText = "Nyala";			
+		})
+
+		off.addEventListener("click", function(e) {
+			info.innerText = "Mati";
+		})
+
+
+ 		// no 4
+		const barang = document.getElementById('totalBarang');
+
+		const pertama = parseInt(prompt("masukkan harga barang"));
+		const kedua = parseInt(prompt("masukkan harga barang"));
+		const ketiga = parseInt(prompt("masukkan harga barang"));
+
+		const total = pertama + kedua + ketiga;
+		if (total > 100000) {
+			const total2 = total * 0.9;
+			totalBarang.innerText = total2;
+		} else {
+			const kurang = "Maaf anda tidak mendapatkan diskon";
+			totalBarang.innerText = total;
+			kurangBeruntung.innerText = kurang;
+		}	
+
+
+		const jamLembur = 6;
+
+		if (jamLembur < 6) {
+			const gaji = `Anda Mendapatkan gaji 100000`;
+			console.log(gaji);
+		} else if (jamLembur == 6) {
+			const gaji = `Anda Mendapatkan gaji 200000`;
+			console.log(gaji);
+		} else if (jamLembur > 6) {
+			const gaji = `Anda Mendapatkan gaji 300000`;
+			console.log(gaji);
+		}
+
+		const liter = 700;
+
+		if (liter <= 500) {
+			const status = "Aman";
+			console.log(status);
+		} else if (liter > 500 && liter <= 600) {
+			const status = "WASPADA";
+			console.log(status);
+		} else if (liter > 600 && liter <= 650) {
+			const status = "SIAGA 2";
+			console.log(status);
+		} else if (liter > 650) {
+			const status = "SIAGA 1";
+			console.log(status);
+		}
+	</script>
+</body>
+</html>

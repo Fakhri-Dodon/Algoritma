@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bilangan Ganjil dan Genap</title>
+</head>
+<body>
+
+	<h1>Belajar JavaScript</h1>
+
+	<h2>Luas Segitiga :</h2>
+	<div id="luasSegitiga"></div>
+
+	<h2>Keliling Lingkaran :</h2>
+	<div id="kelilingLingkaran"></div>
+
+	<h2>luas Persegi Panjang</h2>
+	<div id="luasPP"></div>
+
+	<h2>Penjumlahan Dua Angka :</h2>
+	<div id="penjumlahanDuaAngka"></div>
+
+	<h2>Jam Ke Detik :</h2>
+	<div id="jamKeDetik"></div>
+
+	<h2>Jam Ke Menit :</h2>
+	<div id="JamKeMenit"></div>
+
+	<h2>Menghitung KG ke Gram :</h2>
+	<div id="KGkeGram"></div>
+
+	<h2>Menghitung KM ke Meter</h2>
+	<div id="KM"></div>
+	<script type="text/javascript">
+		// input
+		// let bilangan = 21;
+		// // proses
+		// if (bilangan % 2 == 0) {
+		// 	hasil = "Bilangan Genap";
+		// } else {
+		// 	hasil = "Bilangan Ganjil";
+		// }
+		// // output
+		// console.log(hasil);
+
+		// 1. luas segitiga
+		// input
+		const segitiga= document.getElementById('luasSegitiga');
+		const a = 12;
+		const t = 15;
+
+		// proses
+		const hasil = (1/2) * a * t;
+
+		// output
+		console.log(hasil)
+		segitiga.innerText = hasil;
+
+
+		// 2. keliling lingkaran
+		// input
+		const lingkaran = document.getElementById('kelilingLingkaran');
+		const phi = 3.14;
+		const r = 10;
+
+		// proses
+		const hasil2 = phi * r * 2;
+
+		// output
+		console.log(`keliling lingkaran tersebut adalah ${hasil2}`);
+		lingkaran.innerText = hasil2;
+
+		// 3. luas persegi panjang
+		// input
+		const pp = document.getElementById('luasPP');
+		const p = 40;
+		const l = 25;
+
+		// proses
+		const hasil3 = p * l;
+
+		// output
+		console.log(`luas persegi panjang adalah ${hasil3}`);
+		pp.innerText = hasil3;
+
+		// selection algoritma
+
+		// siswa kompeten atau tidak
+		// input 
+		const nilai = 80;
+
+		// proses
+		if (nilai < 80) {
+			hasil4 = "tidak kompeten";
+		} else {
+			hasil4 = "kompeten";
+		}
+
+		// output
+		console.log(hasil4);
+
+		// penjumlahan 2 angka
+		const duaAngka = document.getElementById('penjumlahanDuaAngka')
+		let bil_1 = 5;
+		let bil_2 = 6;
+
+		let hasilBilangan = bil_1 + bil_2;
+
+		console.log(`Hasil ${bil_1} ditambah ${bil_2} adalah ${hasilBilangan}`);
+		duaAngka.innerText = hasilBilangan;
+
+		// jam ke detik
+		const detik = document.getElementById('jamKeDetik')
+		let jam1 = 7;
+		let hasil1 = jam1 * 3600;
+
+		console.log(`Jam ${jam1} ke Detik adalah ${hasil1}`);
+		detik.innerText = hasil1;
+
+		// jam ke menit
+		const menit = document.getElementById('JamKeMenit');
+		let jam = 12;
+		let hasiljam = jam * 60;
+
+		console.log(`Jam ${jam} ke Detik adalah ${hasil}`);
+		menit.innerText = hasiljam;
+
+		// menghitung kg ke gram
+		const gram = document.getElementById('KGkeGram');
+		let kg = 7;
+		let hasilKg = kg * 1000;
+
+		console.log(`${kg} ke G adalah ${hasilKg}`);
+		gram.innerText = hasilKg;
+
+		// menghitung km ke m
+		const Km = document.getElementById('KM');
+		let km = 143;
+		let hasilKm = km * 1000;
+
+		console.log(`${km} ke M adalah ${hasilKm}`);
+		Km.innerText = hasilKm;
+
+	</script>
+</body>
+</html>
