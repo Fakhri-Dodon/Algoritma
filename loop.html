@@ -13,9 +13,30 @@
 
 		let daun = 10;
 		while(daun >= 1) {
-			console.log(daun);
+			console.log("daun " + daun);
 			daun--;
 		}
+
+		let c = 10;
+		do {
+			console.log(c);
+			c++;
+		}while(c >= 1);
+
+		let pendapatan = 300000;
+		if (pendapatan >=0 && pendapatan<=200000) {
+			jasa = 10000;
+			komisi = 0.1 * pendapatan;
+		} else if (pendapatan<=500000) {
+			jasa = 20000;
+			komisi = 0.15 * pendapatan;
+		} else {
+			jasa = 30000;
+			komisi = 0.2 * pendapatan;
+		}
+
+		total = komisi + jasa;
+		console.log(`total yang akan didapat ${total}`);
 	</script>
 </body>
 </html>

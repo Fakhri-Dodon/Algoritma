@@ -65,21 +65,21 @@
 
 
  		// no 4
-		const barang = document.getElementById('totalBarang');
+		// const barang = document.getElementById('totalBarang');
 
-		const pertama = parseInt(prompt("masukkan harga barang"));
-		const kedua = parseInt(prompt("masukkan harga barang"));
-		const ketiga = parseInt(prompt("masukkan harga barang"));
+		// const pertama = parseInt(prompt("masukkan harga barang"));
+		// const kedua = parseInt(prompt("masukkan harga barang"));
+		// const ketiga = parseInt(prompt("masukkan harga barang"));
 
-		const total = pertama + kedua + ketiga;
-		if (total > 100000) {
-			const total2 = total * 0.9;
-			totalBarang.innerText = total2;
-		} else {
-			const kurang = "Maaf anda tidak mendapatkan diskon";
-			totalBarang.innerText = total;
-			kurangBeruntung.innerText = kurang;
-		}	
+		// const total = pertama + kedua + ketiga;
+		// if (total > 100000) {
+		// 	const total2 = total * 0.9;
+		// 	totalBarang.innerText = total2;
+		// } else {
+		// 	const kurang = "Maaf anda tidak mendapatkan diskon";
+		// 	totalBarang.innerText = total;
+		// 	kurangBeruntung.innerText = kurang;
+		// }	
 
 
 		const jamLembur = 6;
@@ -110,6 +110,46 @@
 			const status = "SIAGA 1";
 			console.log(status);
 		}
+
+
+		// 1. menghitung gaji karyawan
+		const karyawan1 = "Udin";
+		const karyawan2 = "Arga";
+
+		const gaji1 = 500000;
+		const gaji2 = 800000;
+
+		const tunjangan1 = 0.20 * gaji1;
+		const tunjangan2 = 0.20 * gaji2;
+
+		const pjk1 = 0.15 * (gaji1 + tunjangan1);
+		const pjk2 = 0.15 * (gaji2 + tunjangan2);
+
+		const bersih1 = gaji1 + tunjangan1 - pjk1;
+		const bersih2 = gaji2 + tunjangan2 - pjk2;
+
+		console.log(`${karyawan1} memiliki gaji sebesar ${gaji1} dengan tunjangan ${tunjangan1} dan pajak ${pjk1}. Gaji bersihnya adalah ${bersih1}`);
+
+		// 2. mengkonversi jam-menit-detik ke total waktu
+		const jam = 1;
+		const menit = 30;
+		const detik = 40;
+
+		const total = jam * 3600 + menit * 60 + detik;
+		console.log(`${total} detik`);
+
+		// 3. total waktu ke jam-menit-detik
+		const totaldetik = 5440;
+		const bagijam = Math.floor(totaldetik/3600);
+
+		const totaldetik2 = totaldetik % 3600;
+		const bagimenit = totaldetik2/60;
+		const ngitungmenit = Math.floor(bagimenit);
+
+		const totaldetik3 = Math.floor(totaldetik2 % 60);
+
+		console.log(totaldetik2);
+		console.log(`${bagijam}.${ngitungmenit}.${totaldetik3}`);
 	</script>
 </body>
 </html>
