@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 1.Menghitung jumlah uang yang harus dikeluarkan pembeli jeruk
+		const kgJeruk = Number
+			(prompt("KiloGram (Gunakan titik(.) untuk menggantikan koma(,)"));
+		const hargaPerG = 5;
+		const diskon = 0.05;
+
+		const mengubahKg = kgJeruk * 1000;
+		const totalSebelumDiskon = hargaPerG * mengubahKg;
+		const totalSesudahDiskon = diskon * totalSebelumDiskon;
+		const total = totalSebelumDiskon - totalSesudahDiskon;
+
+		console.log(`Total sebelum diskon adalah Rp.${totalSebelumDiskon}, dan diskon nya adalah Rp.${totalSesudahDiskon}. Akhirnya total setelah didiskon adalah Rp.${total}`);
+
+		// 2.
+		
+		let bilanganBulat = 1045;
+		let satuan = Math.floor (bilanganBulat % 10)
+		let puluhan = Math.floor (bilanganBulat % 100 / 10)
+		let ratusan = Math.floor (bilanganBulat % 1000 / 100)
+
+		console.log (`Bilangan ${ratusan} ratusan, ${puluhan} puluhan, dan ${satuan} satuan`);
+
+
+
+		// 3.Menyatakan cuaca 
+		const user = 280;
+		const celcius = (5/9 * user) - 32;
+
+		if (celcius >= 300) {
+			console.log("Panas");
+		} else if (celcius <= 250) {
+			console.log("Dingin");
+		} else {
+			console.log("Normal");
+		}
+
+		
+	</script>
+</body>
+</html>

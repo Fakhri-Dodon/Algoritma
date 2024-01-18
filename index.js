@@ -9,8 +9,6 @@ let hasil = 2 * panjang + 2 * lebar;
 
 console.log("keliling persegi panjang adalah: " + hasil);
 
-
-
 // 2. luas lingkaran
 
 // tentukan phi dan r

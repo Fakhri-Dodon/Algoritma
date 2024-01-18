@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<h1>Faktorial</h1>
+		<div id="total"></div>	
+	</div>
+	<script type="text/javascript">
+		// for(let c = 1; c <=50; c++) {
+		// 	if (c % 2 == 0) {
+		// 		console.log(`${c} adalah bilangan genap`);
+		// 	} else {
+		// 		console.log(`${c} adalah bilangan ganjil`);
+		// 	}
+		// }
+
+		// let x = 1;
+		// while(x <= 20) {
+		// 	if (x % 2 == 0) {
+		// 		console.log(`${x} adalah bilangan genap`);
+		// 	} else {
+		// 		console.log(`${x} adalah bilangan ganjil`);
+		// 	}x++;
+		// }
+
+		// let z = 1
+		// do {
+		// 	if (z % 2 == 0) {
+		// 		console.log(`${z} adalah bilangan genap`);
+		// 	} else {
+		// 		console.log(`${z} adalah bilangan ganjil`);
+		// 	}z++;
+		// } while(z <= 20);
+		
+
+	// Menghitung faktorial menggunakan looping
+		let number = Number(prompt('Masukan angka'));
+		let faktor = 1;
+		
+		// for(let i = 1; i <= number; i++) {
+		// 	faktor *= i; 	
+		// }
+
+		// let h = 1;
+		// while(h <= number) {
+		// 	faktor *= h;
+		// 	h++;
+		// }  
+
+		let k = 1 
+		do {
+			faktor *= k
+			k++
+		}while(k <= number);
+	
+		const kata = `Jadi faktorial dari ${number} adalah ${faktor}`;
+		total.innerText = kata;
+ 	</script>
+</body>
+</html>
