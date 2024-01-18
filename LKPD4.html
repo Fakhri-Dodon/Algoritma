@@ -3,32 +3,47 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Time</title>
+	<title>LKPD 4</title>
+
+	<style type="text/css">
+		body {
+			display: flex;
+			justify-content: space-evenly;
+		}
+	</style>
 </head>
 <body>
-	<table border="1">
-		<tr>
-			<th>Data Waktu</th>
-			<th>Setelah penambahan waktu 1 detik</th>
-		</tr>
-		<tr>
-			<td id="awal">02:13:23</td>
-			<td id="waktu1">02:13:23</td>
-		</tr>
-		<tr>
-			<td>02:13:59</td>
-			<td id="waktu2">02:13:59</td>
-		</tr>
-		<tr>
-			<td>02:59:59</td>
-			<td id="waktu3">02:59:59</td>
-		</tr>
-		<tr>
-			<td>23:59:59</td>
-			<td id="waktu4">23:59:59</td>
-		</tr>
-	</table>
-	<button id="start" style="width: 100px; height: 30px;">start</button>
+	<div>	
+		<table border="1">
+			<tr>
+				<th>Data Waktu</th>
+				<th>Setelah penambahan waktu 1 detik</th>
+			</tr>
+			<tr>
+				<td id="awal">02:13:23</td>
+				<td id="waktu1">02:13:23</td>
+			</tr>
+			<tr>
+				<td>02:13:59</td>
+				<td id="waktu2">02:13:59</td>
+			</tr>
+			<tr>
+				<td>02:59:59</td>
+				<td id="waktu3">02:59:59</td>
+			</tr>
+			<tr>
+				<td>23:59:59</td>
+				<td id="waktu4">23:59:59</td>
+			</tr>
+		</table>
+		<button id="start" style="width: 100px; height: 30px;">start</button>
+	</div>
+	<div>
+		<div id="data"></div>
+	</div>
+	<div>
+		<div id="nilai"></div>
+	</div>
 
 	<script type="text/javascript">
 	// 1
@@ -50,7 +65,7 @@
 		} else {
 		    Grade = 'K'
 		}
-		console.log (`Rata-rata nilai ${rata} dengan grade${Grade}`)
+		document.getElementById('nilai').innerText = `Rata-rata nilai ${rata} dengan grade ${Grade}`;
 
 	// 2
 		const input = Number(prompt('Masukan kode pegawai (11 digit) : '))
@@ -77,12 +92,12 @@
 		        case 11: bulanName = 'NOV'; break;
 		        case 12: bulanName = 'DES'; break;
 		        default: bulanName = 'Invalid';
-		    } console.log(`${input} adalah seorang pegawai bergolongan ${golongan}, 
+		    } document.getElementById('data').innerText = (`${input} adalah seorang pegawai bergolongan ${golongan}, 
 		    lahir pada tanggal ${tgl} ${bulanName} ${thn} dan bernomor urut ${3}`)
 		} else {
-		    console.log('Golongan tidak valid.')
+		    document.getElementById('data').innerText = ('Golongan tidak valid.')
 		}
-		
+
 
 	// 3
 		let jam = 2;
@@ -155,9 +170,29 @@
 
 		start.addEventListener("click", function (e) {
 			waktu4.innerHTML =`${bagiJam4}:${ngitungMenit4}:${totalBag43}`;
-		});
+		});	
+	// cara kedua
+		let j = Number(2)
+		let m = Number(13)
+		let d = Number(59) + 1;
 
+		let hasilM = m
 
+		if (d > 59) {
+		    d = '00'
+		    hasilM = m + 1
+		}
+		if (hasilM > 59) {
+		    hasilM = '00'
+		    j = j + 1
+		}
+		if (j > 23) {
+		    j = 0
+		    hasilM = 0
+		    d = '00'
+		}
+
+		console.log(`${j}:${hasilM}:${d}`)
 
 	</script>
 </body>
