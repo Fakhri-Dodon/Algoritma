@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tahun kabisat</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// Kabisat dengan for
+		for(let tahun = 1700; tahun <= 2023; tahun += 4) {
+			if (tahun % 4 === 0 && (tahun % 100 !== 0 || tahun % 400 === 0)) {
+				console.log(`${tahun} adalah tahun kabisat`);
+			} else {
+				console.log(`${tahun} bukan tahun kabisat`);
+			}	
+		}
+
+	// kabisat dengan while
+		let tahun2 = Number(1900);
+		while(tahun2 <= 2023){
+			if (tahun2 % 4 === 0 && (tahun2 % 100 !== 0 || tahun2 % 400 === 0)) {
+				console.log(`${tahun2} adalah tahun kabisat`);
+			} else {
+				console.log(`${tahun2} bukan tahun kabisat`);
+			}
+			tahun2 += 4;	
+		}
+
+	// kabisat dengan do-while
+		let tahun3 = Number(1600);
+		do {
+			if (tahun3 % 4 === 0 && (tahun3 % 100 !== 0 || tahun3 % 400 === 0)) {
+				console.log(`${tahun3} adalah tahun kabisat`);
+			} else {
+				console.log(`${tahun3} bukan tahun kabisat`);
+			}
+			tahun3 += 4;
+		} while(tahun3 <= 2023);
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LKPD 5</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// No. 1
+		// let bilangan = 1;
+		// while(bilangan <= 50) {
+		// 	console.log(bilangan)
+		// 	bilangan++;
+		// }
+
+		// No. 2
+		// let ganjil = 1;
+		// while(ganjil <= 50) {
+		// 	console.log(`${ganjil} adalah bilangan ganjil`);
+		// 	ganjil += 2;
+		// }
+
+		// No. 3
+		// let genap = 2;
+		// while(genap <= 50) {
+		// 	console.log(`${genap} adalah bilangan genap`)
+		// 	genap += 2;
+		// }
+
+		// No. 4
+		// for(let c = 1; c <=50; c++) {
+		// 	if (c % 2 == 0) {
+		// 		console.log(`${c} adalah bilangan genap`);
+		// 	} else {
+		// 		console.log(`${c} adalah bilangan ganjil`);
+		// 	}
+		// }
+
+		// No. 5
+		let jumlah = 0;
+		let bilBesar = -Infinity;
+		let bilKecil = Infinity;
+		let x = 1;
+		while(x <= 20) {
+			let bil = parseInt(prompt('Masukan bilangan sebanyak 20 kali', x));
+			jumlah = jumlah + bil;
+			if (bil > bilBesar) {
+				bilBesar = bil 
+			}if (bil < bilKecil) {
+				bilKecil = bil;
+			}
+			x+=1;
+		}
+		let rata = jumlah / 20;
+		console.log(`Bilangan terbesar : ${bilBesar}`);
+		console.log(`Bilangan terkecil : ${bilKecil}`);
+		console.log(`Rata - rata bilangan : ${rata}`);
+	</script>
+</body>
+</html>

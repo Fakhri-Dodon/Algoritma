@@ -7,9 +7,9 @@
 </head>
 <body>
 	<script type="text/javascript">
-		for(let go = 20; go >= 1; go--) {
-			document.write("<p>sesuatu ke-"+go+"</p>");
-		}
+		// for(let go = 20; go >= 1; go--) {
+		// 	document.write("<p>sesuatu ke-"+go+"</p>");
+		// }
 
 		let daun = 10;
 		while(daun >= 1) {
@@ -17,11 +17,11 @@
 			daun--;
 		}
 
-		let c = 10;
-		do {
-			console.log(c);
-			c++;
-		}while(c >= 1);
+		// let c = 10;
+		// do {
+		// 	console.log(c);
+		// 	c++;
+		// }while(c >= 1);  
 
 		let pendapatan = 300000;
 		if (pendapatan >=0 && pendapatan<=200000) {
@@ -37,6 +37,14 @@
 
 		total = komisi + jasa;
 		console.log(`total yang akan didapat ${total}`);
+
+		for(let c = 1; c <=50; c++) {
+			if (c % 2 == 0) {
+				console.log(`${c} adalah bilangan genap`);
+			} else {
+				console.log(`${c} adalah bilangan ganjil`);
+			}
+		}
 	</script>
 </body>
 </html>
